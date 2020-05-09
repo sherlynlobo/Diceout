@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -38,6 +39,9 @@ public class MainActivity extends AppCompatActivity {
 
     //ArrayList to hold all 3 dice values
     ArrayList<Integer> dice;
+
+    //ArrayList to hold all 3 dice images
+    ArrayList<ImageView> diceImageViews;
 
 
     @Override
@@ -66,6 +70,18 @@ public class MainActivity extends AppCompatActivity {
 
         //Create ArrayList container for the dice values
         dice = new ArrayList<Integer>();
+
+        ImageView die1Image = findViewById(R.id.die1Image);
+        ImageView die2Image = findViewById(R.id.die2Image);
+        ImageView die3Image = findViewById(R.id.die3Image);
+
+        diceImageViews = new ArrayList<ImageView>();
+        diceImageViews.add(die1Image);
+        diceImageViews.add(die2Image);
+        diceImageViews.add(die3Image);
+
+
+
 
 
         //create greeting
