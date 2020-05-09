@@ -2,23 +2,17 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_green_dark">
 
-
-    <TextView
-        android:id="@+id/rollResult"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="70dp"
-        android:text="@string/let_s_play" />
 
     <ImageView
+        android:id="@+id/die1Image"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:id="@+id/die1Image"
         android:layout_below="@id/rollResult"
-        android:layout_marginTop="25dp"
         android:layout_alignParentLeft="true"
+        android:layout_marginTop="25dp"
         android:src="@drawable/die_1" />
 
     <ImageView
@@ -26,8 +20,8 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_below="@id/rollResult"
-        android:layout_marginTop="25dp"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
         android:src="@drawable/die_1" />
 
     <ImageView
@@ -35,9 +29,17 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_below="@id/rollResult"
-        android:layout_marginTop="25dp"
         android:layout_alignParentRight="true"
+        android:layout_marginTop="25dp"
         android:src="@drawable/die_1" />
+
+    <TextView
+        android:id="@+id/rollResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:text="@string/let_s_play"
+        android:textColor="@android:color/white" />
 
     <TextView
         android:id="@+id/scoreText"
@@ -48,6 +50,7 @@
         android:layout_marginBottom="50dp"
         android:text="Score : 0"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@android:color/white"
         android:textSize="24sp" />
 
 </RelativeLayout>
