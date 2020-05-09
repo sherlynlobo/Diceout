@@ -15,6 +15,8 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.Random;
+
 public class MainActivity extends AppCompatActivity {
 
     //Field to hold the roll result text
@@ -25,6 +27,9 @@ public class MainActivity extends AppCompatActivity {
 
     //Field to hold the score
     int score;
+
+    Random rand;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,8 +49,11 @@ public class MainActivity extends AppCompatActivity {
         //Set initial score
         score = 0;
 
-        rollResult = (TextView) findViewById(R.id.rollResult);
-        rollButton = (Button) findViewById(R.id.rollButton);
+        rollResult = findViewById(R.id.rollResult);
+        rollButton = findViewById(R.id.rollButton);
+
+        //initialize the random number generator
+        rand = new Random();
 
 
         //create greeting
@@ -55,6 +63,9 @@ public class MainActivity extends AppCompatActivity {
     public void rollDice(View view)
     {
         rollResult.setText("Clicked");
+        int num = rand.nextInt(6)+1;
+        String randomValue = "Number Generated: " + num;
+        Toast.makeText(getApplicationContext(),randomValue,Toast.LENGTH_SHORT).show();
 
     }
 
