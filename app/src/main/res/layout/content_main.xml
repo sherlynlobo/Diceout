@@ -38,7 +38,7 @@
         android:layout_below="@id/rollResult"
         android:layout_marginTop="25dp"
         android:layout_centerHorizontal="true"
-        android:src="@drawable/die_2" />
+        android:src="@drawable/die_1" />
 
     <ImageView
         android:layout_width="100dp"
@@ -47,5 +47,5 @@
         android:layout_below="@id/rollResult"
         android:layout_marginTop="25dp"
         android:layout_alignParentRight="true"
-        android:src="@drawable/die_3" />
+        android:src="@drawable/die_1" />
 </RelativeLayout>
