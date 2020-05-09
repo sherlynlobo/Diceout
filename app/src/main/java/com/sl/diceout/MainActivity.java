@@ -21,14 +21,14 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Random;
-
+//remove rollButton
 public class MainActivity extends AppCompatActivity {
 
     //Field to hold the roll result text
     TextView rollResult;
 
     //Field to hold roll Button
-    Button rollButton;
+   // Button rollButton;
 
     //Field to hold the score
     int score;
@@ -61,15 +61,18 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                try {
+                    rollDice(view);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
             }
         });
         //Set initial score
         score = 0;
 
         rollResult = findViewById(R.id.rollResult);
-        rollButton = findViewById(R.id.rollButton);
+        //rollButton = findViewById(R.id.rollButton);
         scoreText = findViewById(R.id.scoreText);
 
         //initialize the random number generator
